@@ -1,9 +1,9 @@
-# Ptoyecto Progra Web Universidad Fidélitas.
 
-Facultad de Ingeniería en Sistemas de Computación
-Universidad Fidélitas
 
-Desarrollo de Aplicaciones Web y Patrones.
+# Facultad de Ingeniería en Sistemas de Computación
+###           Universidad Fidélitas
+
+ #### Desarrollo de Aplicaciones Web y Patrones.
 
 INTEGRANTES:
 Steven Feng Peng
