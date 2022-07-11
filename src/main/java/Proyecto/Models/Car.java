@@ -1,13 +1,18 @@
 package Proyecto.Models;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "cars")
-public class Car {
+public class Car implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCar;
+    private Long idCar;
     private String brand;
     private String model;
     private int year;
@@ -31,11 +36,11 @@ public class Car {
         this.image = image;
     }
 
-    public int getIdCar() {
+    public Long getIdCar() {
         return idCar;
     }
 
-    public void setIdCar(int idCar) {
+    public void setIdCar(Long idCar) {
         this.idCar = idCar;
     }
 
