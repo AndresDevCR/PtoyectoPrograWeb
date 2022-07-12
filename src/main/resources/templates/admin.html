@@ -42,7 +42,11 @@
                 </button>
             </div>
         </div>
-        <h1 class="container text-center admin">Autos Usados</h1>
+        <div class="container text-center">
+            <h1 class="container admin">Modo Administrador</h1>
+            <h6 class="used" >Vehiculos Usados</h6>
+            <a th:href="@{/new}" class="btn btn-primary add">Agregar</a>
+        </div>
         <article class="container" th:each="item : ${autos}">
             <div class="card" style="width: 18rem;">
                 <img th:src="@{'/img/'+${item.image}}" class="card-img-top">
@@ -50,6 +54,8 @@
                     <h5 th:text="${item.brand}" class="card-title"></h5>
                     <p th:text="${item.description}" class="card-text"></p>
                     <a href="#" class="btn btn-primary">ver</a>
+                    <a th:href="@{/edit/} + ${item.idCar}" class="btn btn-primary edit">Editar</a>
+                    <a th:href="@{/delete/} + ${item.idCar}" class="btn btn-danger delete">Eliminar</a>
                 </div>
             </div>
         </article>

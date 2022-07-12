@@ -3,7 +3,7 @@
     font-family: 'Permanent Marker', cursive;
 }
 
-.carousel-inner{
+.carousel-inner {
     max-block-size: 30rem;
 }
 
@@ -11,7 +11,7 @@
     background-color: black;
     padding: 25px;
     color: white;
-    margin-top: 100rem;    
+    margin-top: 100rem;
 }
 
 .nav-item {
@@ -20,8 +20,32 @@
     font-size: 20px;
     font-family: 'Permanent Marker', cursive;
 }
+
 .card {
     float: left;
     margin-right: 10px;
 }
 
+.admin {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.delete {
+   background-color: brown;
+    color: white;
+}
+
+.edit {
+    background-color: green;
+    color: white;
+}
+.add {
+    background-color: blue;
+    color: white;
+    margin-bottom: 50px;
+}
+.used{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}

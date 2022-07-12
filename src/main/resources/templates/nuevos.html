@@ -1,69 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head th:replace="plantilla::head"></head>
 <header th:replace="plantilla::header"></header>
-
 <body>
-    <section>
-        <h1 class="text-center m-5"> Agregar</h1>
-        <div class="container">
-            <form th:action="@{/add}" method="post" th:object="${item}" enctype="multipart/form-data">
-
-                <input type="hidden" class="form-control" name="id">
-
-                <div class="form-control">
-                    <label for="brand"> Marca </label>
-                    <input type="text" class="form-control" name="brand">
-                    <br>
-                </div>
-                <div class="form-control">
-                    <label for="model"> Modelo </label>
-                    <input type="text" class="form-control" name="model">
-                    <br>
-                </div>
-
-                <div class="form-control">
-                    <label for="year"> Año </label>
-                    <input type="number" class="form-control" name="year">
-                    <br>
-                </div>
-
-                <div class="form-control">
-                    <label for="color"> Color </label>
-                    <input type="text" class="form-control" name="color">
-                    <br>
-                </div>
-
-                <div class="form-control">
-                    <label for="pice"> Precio </label>
-                    <input type="number" class="form-control" name="price">
-                    <br>
-                </div>
-
-                <div class="form-control">
-                    <label for="km"> Kilometors </label>
-                    <input type="number" class="form-control" name="km">
-                    <br>
-
-                    <div class="form-control">
-                        <label for="description"> Descripcion </label>
-                        <input type="text" class="form-control" name="description">
-                        <br>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="file"> Imagen </label>
-                        <input type="file" class="form-control" name="file">
-                        <br>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-success">Agregar</button>
-            </form>
-        </div>
-    </section>
-    </form>
-
+    
 </body>
 <footer th:replace="plantilla::footer"></footer>
-
 </html>
