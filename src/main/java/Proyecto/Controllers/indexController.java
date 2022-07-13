@@ -31,18 +31,9 @@ public class indexController {
         return "contacto";
     }
 
-    @GetMapping("/Informacion")
-    public String informacion() {
-        return "informacion";
-    }
-
     @GetMapping("/Talleres")
     public String talleres() {
         return "talleres";
     }
-
-
-
-
-    
+  
 }
