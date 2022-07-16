@@ -2,7 +2,7 @@
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="layout/plantilla::head"></head>
-<header th:replace="layout/plantilla::header"></header>
+<header th:replace="layout/plantilla::header-admin"></header>
 
 <body>
     <section>
@@ -45,7 +45,7 @@
         <div class="container text-center">
             <h1 class="container admin">Modo Administrador</h1>
             <h6 class="used" >Vehiculos Usados</h6>
-            <a th:href="@{/new}" class="btn btn-primary add">Agregar</a>
+            <a th:href="@{/admin/auto/new}" class="btn btn-primary add">Agregar</a>
         </div>
         <article class="container" th:each="item : ${autos}">
             <div class="card" style="width: 18rem;">
@@ -54,8 +54,8 @@
                     <h5 th:text="${item.brand}" class="card-title"></h5>
                     <p th:text="${item.description}" class="card-text"></p>
                     <a href="#" class="btn btn-primary">ver</a>
-                    <a th:href="@{/edit/} + ${item.idCar}" class="btn btn-primary edit">Editar</a>
-                    <a th:href="@{/delete/} + ${item.idCar}" class="btn btn-danger delete">Eliminar</a>
+                    <a th:href="@{/admin/auto/edit/} + ${item.idCar}" class="btn btn-primary edit">Editar</a>
+                    <a th:href="@{/admin/auto/delete/} + ${item.idCar}" class="btn btn-danger delete">Eliminar</a>
                 </div>
             </div>
         </article>

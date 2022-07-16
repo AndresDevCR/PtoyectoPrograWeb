@@ -28,42 +28,64 @@ public class adminController {
     public String admin(Model model) {
         var autos = carService.getAllCars();
         model.addAttribute("autos", autos);
-        return "admin";
+        return "/admin/admin";
     }
 
-    @GetMapping("/new")
+    @GetMapping("/admin/auto/new")
     public String newdata(Model model) {
-        return "agregarCar";
+        return "/admin/agregarCar";
     }
 
-    @PostMapping("/add")
+    @PostMapping("/admin/auto/add")
     public String add(Car car,
             @RequestParam("file") MultipartFile imagen) {
-        Path directorio = Paths.get("src//main//resources//static//img");
-        String ruta = directorio.toFile().getAbsolutePath();
-        try {
-            byte[] bytesImg = imagen.getBytes();
-            Path rutaArchivo = Paths.get(ruta + "//" + imagen.getOriginalFilename());
-            Files.write(rutaArchivo, bytesImg);
-            car.setImage(imagen.getOriginalFilename());
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (!imagen.isEmpty()) {
+            Path directorio = Paths.get("src//main//resources//static//img");
+            String ruta = directorio.toFile().getAbsolutePath();
+            try {
+                byte[] bytesImg = imagen.getBytes();
+                Path rutaArchivo = Paths.get(ruta + "//" + imagen.getOriginalFilename());
+                Files.write(rutaArchivo, bytesImg);
+                car.setImage(imagen.getOriginalFilename());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         carService.save(car);
-        return "redirect:/admin";
+        return "redirect:/admin/admin";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("/admin/auto/delete/{id}")
     public String delete(@PathVariable Long id) {
         Car car = carService.find(id);
         carService.delete(car);
-        return "redirect:/admin";
+        return "redirect:/admin/admin";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("/admin/auto/edit/{id}")
     public String edit(@PathVariable Long id, Model model) {
         Car car = carService.find(id);
         model.addAttribute("item", car);
-        return "editarCar";
+        return "/admin/editarCar";
+    }
+
+    @GetMapping("/Admin/Nuevos")
+    public String nuevos() {
+        return "/admin/nuevos";
+    }
+
+    @GetMapping("/Admin/Usados")
+    public String usados() {
+        return "/admin/usados";
+    }
+
+    @GetMapping("/Admin/Motocicletas")
+    public String motocicletas() {
+        return "/admin/motocicletas";
+    }
+
+    @GetMapping("/Admin/Alquiler")
+    public String alquiler() {
+        return "/admin/alquiler";
     }
 }

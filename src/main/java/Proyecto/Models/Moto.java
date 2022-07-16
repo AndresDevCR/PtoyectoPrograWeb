@@ -7,15 +7,15 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "cars")
+@Table(name = "motocicletas")
 @Data
-public class Car implements Serializable {
+public class Moto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCar;
+    private Long idMoto;
     private String brand;
     private String model;
     private int year;
@@ -25,11 +25,10 @@ public class Car implements Serializable {
     private String description;
     private String image;
 
-    public Car() {
+    public Moto() {
     }
 
-    public Car(String brand, String model, int year, String color, int price, int km, String description,
-            String image) {
+    public Moto(String brand, String model, int year, String color, int price, int km, String description, String image) {
         this.brand = brand;
         this.model = model;
         this.year = year;

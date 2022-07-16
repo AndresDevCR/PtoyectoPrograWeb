@@ -2,53 +2,53 @@
 <html lang="es">
 
 <head th:replace="layout/plantilla::head"></head>
-<header th:replace="layout/plantilla::header"></header>
+<header th:replace="layout/plantilla::header-admin"></header>
 
 <body>
     <section>
-        <h1 class="text-center m-5"> Agregar Auto</h1>
+        <h1 class="text-center m-5"> Editar Auto</h1>
         <div class="container">
-            <form th:action="@{/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+            <form th:action="@{/admin/auto/add}" method="post" th:object="${item}" enctype="multipart/form-data">
 
-                <input type="hidden" class="form-control" name="id">
+                <input type="hidden" class="form-control" name="id" th:field="${item.idCar}">
 
                 <div class="form-control">
                     <label for="brand"> Marca </label>
-                    <input type="text" class="form-control" name="brand">
+                    <input type="text" class="form-control" name="brand" th:field="${item.brand}">
                     <br>
                 </div>
                 <div class="form-control">
                     <label for="model"> Modelo </label>
-                    <input type="text" class="form-control" name="model">
+                    <input type="text" class="form-control" name="model" th:field="${item.model}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="year"> Año </label>
-                    <input type="number" class="form-control" name="year">
+                    <input type="number" class="form-control" name="year" th:field="${item.year}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="color"> Color </label>
-                    <input type="text" class="form-control" name="color">
+                    <input type="text" class="form-control" name="color" th:field="${item.color}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="pice"> Precio </label>
-                    <input type="number" class="form-control" name="price">
+                    <input type="number" class="form-control" name="price" th:field="${item.price}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="km"> Kilometros </label>
-                    <input type="number" class="form-control" name="km">
+                    <input type="number" class="form-control" name="km" th:field="${item.km}">
                     <br>
 
                     <div class="form-control">
                         <label for="description"> Descripcion </label>
-                        <input type="text" class="form-control" name="description">
+                        <input type="text" class="form-control" name="description" th:field="${item.description}">
                         <br>
                     </div>
 

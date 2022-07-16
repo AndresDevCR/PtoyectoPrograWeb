@@ -2,13 +2,13 @@
 <html lang="es">
 
 <head th:replace="layout/plantilla::head"></head>
-<header th:replace="layout/plantilla::header"></header>
+<header th:replace="layout/plantilla::header-admin"></header>
 
 <body>
     <section>
         <h1 class="text-center m-5"> Editar Auto</h1>
         <div class="container">
-            <form th:action="@{/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+            <form th:action="@{/admin/auto/add}" method="post" th:object="${item}" enctype="multipart/form-data">
 
                 <input type="hidden" class="form-control" name="id" th:field="${item.idCar}">
 

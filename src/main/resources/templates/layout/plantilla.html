@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
-<header th:fragment="header">
+<header th:fragment="headerindex">
     <nav>
         <nav class="navbar navbar-expand-sm navbar-dark " style="background-color: #030303;">
             <a class="navbar-brand" th:href="@{/}"> <img
@@ -38,6 +38,36 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/Contacto}"> Contacto </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
+</header>
+
+
+<header th:fragment="header-admin">
+    <nav>
+        <nav class="navbar navbar-expand-sm navbar-dark " style="background-color: #030303;">
+            <a class="navbar-brand" th:href="@{/admin}"> <img
+                    src="https://media.istockphoto.com/vectors/vector-tire-background-vector-id906761754?b=1&k=6&m=906761754&s=170667a&w=0&h=RIfHohJbfTBYA84gER4rdlS03diBr-zCEi5jApEAONI= "
+                    style="width:10rem; height:10rem;" alt=""> Solo Llantas CR</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-3 mt-lg-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/Admin/Nuevos}"> Autos Nuevos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/Admin/Usados}"> Autos Usados </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/Admin/Alquiler}"> Alquileres de Vehículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/Admin/Motocicletas}"> Motocicletas </a>
                     </li>
                 </ul>
             </div>
