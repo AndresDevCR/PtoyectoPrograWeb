@@ -21,15 +21,18 @@
     font-size: 20px;
     font-family: 'Permanent Marker', cursive;
     padding-left: 40px;
+    
 }
 
 .nav-link {
-    color: salmon
+    color: whitesmoke;
 }
 
 .card {
     float: left;
     margin-right: 10px;
+    margin-left: 20px;
+
 }
 
 .admin {
@@ -53,6 +56,7 @@
     background-color: green;
     color: white;
 }
+
 .edit:hover {
     background-color: rgb(96, 170, 96);
     color: white;

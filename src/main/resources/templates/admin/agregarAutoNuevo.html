@@ -6,11 +6,11 @@
 
 <body>
     <section>
-        <h1 class="text-center m-5"> Agregar Moto</h1>
+        <h1 class="text-center m-5"> Agregar Autos Nuevos</h1>
         <div class="container">
-            <form th:action="@{/admin/moto/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+            <form th:action="@{/admin/nuevos/add}" method="post" th:object="${item}" enctype="multipart/form-data">
 
-                <input type="hidden" class="form-control" name="id">
+                <input type="hidden" class="form-control" name="idAuto">
 
                 <div class="form-control">
                     <label for="brand"> Marca </label>

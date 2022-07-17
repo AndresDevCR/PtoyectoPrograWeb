@@ -68,24 +68,4 @@ public class adminController {
         model.addAttribute("item", car);
         return "/admin/editarCar";
     }
-
-    @GetMapping("/Admin/Nuevos")
-    public String nuevos() {
-        return "/admin/nuevos";
-    }
-
-    @GetMapping("/Admin/Usados")
-    public String usados() {
-        return "/admin/usados";
-    }
-
-    @GetMapping("/Admin/Motocicletas")
-    public String motocicletas() {
-        return "/admin/motocicletas";
-    }
-
-    @GetMapping("/Admin/Alquiler")
-    public String alquiler() {
-        return "/admin/alquiler";
-    }
 }

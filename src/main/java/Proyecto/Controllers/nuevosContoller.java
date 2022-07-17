@@ -11,30 +11,30 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import Proyecto.Models.Moto;
-import Proyecto.Services.MotoServiceImp;
+import Proyecto.Models.AutoNuevo;
+import Proyecto.Services.AutoNuevoServiceImp;
 
 @Controller
-public class motoContoller {
+public class nuevosContoller {
 
     @Autowired
-    private MotoServiceImp motoService;
+    private AutoNuevoServiceImp nuevosService;
 
-    @GetMapping("/admin/motos")
-    public String adminMotos(Model model) {
-        var motos = motoService.getAllMotos();
-        model.addAttribute("motos", motos);
-        return "/admin/motos";
+    @GetMapping("/admin/nuevos")
+    public String adminAutoNuevos(Model model) {
+        var nuevos = nuevosService.getAllAutoNuevos();
+        model.addAttribute("nuevos", nuevos);
+        return "/admin/nuevos";
        
     }
 
-    @GetMapping("/admin/moto/new")
+    @GetMapping("/admin/nuevos/new")
     public String newdata(Model model) {
-        return "/admin/agregarMoto";
+        return "/admin/agregarAutoNuevo";
     }
 
-    @PostMapping("/admin/moto/add")
-    public String add(Moto moto,
+    @PostMapping("/admin/nuevos/add")
+    public String add(AutoNuevo nuevos,
             @RequestParam("file") MultipartFile imagen) {
         if (!imagen.isEmpty()) {
             Path directorio = Paths.get("src//main//resources//static//img");
@@ -43,26 +43,26 @@ public class motoContoller {
                 byte[] bytesImg = imagen.getBytes();
                 Path rutaArchivo = Paths.get(ruta + "//" + imagen.getOriginalFilename());
                 Files.write(rutaArchivo, bytesImg);
-                moto.setImage(imagen.getOriginalFilename());
+                nuevos.setImage(imagen.getOriginalFilename());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        motoService.save(moto);
-        return "redirect:/admin/motos";
+        nuevosService.save(nuevos);
+        return "redirect:/admin/nuevos";
     }
 
-    @GetMapping("/admin/moto/delete/{id}")
+    @GetMapping("/admin/nuevos/delete/{id}")
     public String delete(@PathVariable Long id) {
-        Moto moto = motoService.find(id);
-        motoService.delete(moto);
-        return "redirect:/admin/motos";
+        AutoNuevo nuevos = nuevosService.find(id);
+        nuevosService.delete(nuevos);
+        return "redirect:/admin/nuevos";
     }
 
-    @GetMapping("/admin/moto/edit/{id}")
+    @GetMapping("/admin/nuevos/edit/{id}")
     public String edit(@PathVariable Long id, Model model) {
-        Moto moto = motoService.find(id);
-        model.addAttribute("item", moto);
-        return "/admin/editarMoto";
+        AutoNuevo nuevos = nuevosService.find(id);
+        model.addAttribute("item", nuevos);
+        return "/admin/editarAutoNuevo";
     }
 }

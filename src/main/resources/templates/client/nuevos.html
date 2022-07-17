@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head th:replace="layout/plantilla::head"></head>
 <header th:replace="layout/plantilla::headerindex"></header>
+
 <body>
-    
+    <section>
+        <div class="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.baccredomatic.com/sites/default/files/2021-06/Catalogo-de-autos-3_0.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://neomotor.sport.es/media/2020/07/marcas-de-coche.jpeg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.toyota-gib.com/web-imgs/models/land-cruiser-prado/kdj150-gkfey/web/kdj150-gkfey-G1.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <h1 class="container text-center admin">Autos Nuevos</h1>
+        <article class="container" th:each="item : ${nuevos}">
+            <div class="card" style="width: 18rem;">
+                <img th:src="@{'/img/'+${item.image}}" class="card-img-top">
+                <div class="card-body">
+                    <h5 th:text="${item.brand}" class="card-title"></h5>
+                    <p th:text="${item.description}" class="card-text"></p>
+                    <a href="#" class="btn btn-primary">ver</a>
+                </div>
+            </div>
+        </article>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
 </body>
 <footer th:replace="layout/plantilla::footer"></footer>
+
 </html>

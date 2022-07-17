@@ -6,18 +6,18 @@
 <section>
     <div class="container text-center">
         <h1 class="container admin">Modo Administrador</h1>
-        <h6 class="used" >Autos Usados</h6>
-        <a th:href="@{/admin/usados/new}" class="btn btn-primary add">Agregar</a>
+        <h6 class="used" >Motocicletas</h6>
+        <a th:href="@{/admin/moto/new}" class="btn btn-primary add">Agregar</a>
     </div>
-    <article class="container" th:each="item : ${usados}">
+    <article class="container" th:each="item : ${motos}">
         <div class="card" style="width: 18rem;">
             <img th:src="@{'/img/'+${item.image}}" class="card-img-top">
             <div class="card-body">
                 <h5 th:text="${item.brand}" class="card-title"></h5>
                 <p th:text="${item.description}" class="card-text"></p>
                 <a href="#" class="btn btn-primary">ver</a>
-                <a th:href="@{/admin/moto/edit/} + ${item.idAuto}" class="btn btn-primary edit">Editar</a>
-                <a th:href="@{/admin/moto/delete/} + ${item.idAuto}" class="btn btn-danger delete">Eliminar</a>
+                <a th:href="@{/admin/moto/edit/} + ${item.idMoto}" class="btn btn-primary edit">Editar</a>
+                <a th:href="@{/admin/moto/delete/} + ${item.idMoto}" class="btn btn-danger delete">Eliminar</a>
             </div>
         </div>
     </article>

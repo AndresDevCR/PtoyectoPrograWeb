@@ -5,13 +5,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import Proyecto.Services.AutoNuevoServiceImp;
+import Proyecto.Services.AutoUsadoServiceImp;
 import Proyecto.Services.CarServiceImp;
+import Proyecto.Services.MotoServiceImp;
 
 @Controller
 public class indexController {
 
     @Autowired
     private CarServiceImp carService;
+
+    @Autowired
+    private MotoServiceImp motoService;
+
+    @Autowired
+    private AutoNuevoServiceImp autoNuevoService;
+
+    @Autowired
+    private AutoUsadoServiceImp autoUsadoService;
 
     @GetMapping("/")
     public String index(Model model) {
@@ -21,17 +33,23 @@ public class indexController {
     }
 
     @GetMapping("/Nuevos")
-    public String nuevos() {
+    public String nuevos(Model model) {
+        var nuevos = autoNuevoService.getAllAutoNuevos();
+        model.addAttribute("nuevos", nuevos);
         return "/client/nuevos";
     }
 
     @GetMapping("/Usados")
-    public String usados() {
+    public String usados(Model model) {
+        var usados = autoUsadoService.getAllAutoUsados();
+        model.addAttribute("usados", usados);
         return "/client/usados";
     }
 
     @GetMapping("/Motocicletas")
-    public String motocicletas() {
+    public String motocicletas(Model model) {
+        var motos = motoService.getAllMotos();
+        model.addAttribute("motos", motos);
         return "/client/motocicletas";
     }
 
