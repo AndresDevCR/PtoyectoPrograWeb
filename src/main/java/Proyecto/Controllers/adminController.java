@@ -28,7 +28,7 @@ public class adminController {
     public String admin(Model model) {
         var autos = carService.getAllCars();
         model.addAttribute("autos", autos);
-        return "/admin/admin";
+        return "/admin/index";
     }
 
     @GetMapping("/admin/auto/new")
@@ -52,14 +52,14 @@ public class adminController {
             }
         }
         carService.save(car);
-        return "redirect:/admin/admin";
+        return "redirect:/admin/index";
     }
 
     @GetMapping("/admin/auto/delete/{id}")
     public String delete(@PathVariable Long id) {
         Car car = carService.find(id);
         carService.delete(car);
-        return "redirect:/admin/admin";
+        return "redirect:/admin/index";
     }
 
     @GetMapping("/admin/auto/edit/{id}")

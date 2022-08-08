@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head th:replace="layout/plantilla::head"></head>
+
+<body class="bk">
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2 class="login">Login <br> <br><br> <br> Solo Llantas CR</h2>
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-10 col-sm-12">
+            <div class="login-form">
+                <form th:action="@{/login}" method="post">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-black">Login</button>
+                    <button type="submit" class="btn btn-secondary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

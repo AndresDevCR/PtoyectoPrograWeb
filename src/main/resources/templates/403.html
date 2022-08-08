@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="layout/plantilla::head"></head>
+<body class="error403" >
+    <!--error 403-->
+    <section class="error" >
+        <div class="container text-center">
+            <h1 class="text-center m-5"> Error 403</h1>
+            <h2 class="text-center m-5"> No tienes permiso para ver esta pagina</h2>
+            <h3 class="text-center m-5"> <a href="{{ url('/') }}"> Volver al inicio </a></h3>
+        </div>
+    </section>
+</body>
+</html>
