@@ -25,10 +25,10 @@ public class adminController {
     private CarServiceImp carService;
 
     @GetMapping("/admin")
-    public String admin(Model model) {
+    public String admin(Model model) { 
         var autos = carService.getAllCars();
         model.addAttribute("autos", autos);
-        return "/admin/index";
+        return "/admin/index"; 
     }
 
     @GetMapping("/admin/auto/new")
@@ -52,7 +52,7 @@ public class adminController {
             }
         }
         carService.save(car);
-        return "redirect:/admin/index";
+        return "redirect:/admin";
     }
 
     @GetMapping("/admin/auto/delete/{id}")

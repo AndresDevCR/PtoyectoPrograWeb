@@ -23,10 +23,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .and()
-                .formLogin();
-                /* .loginPage("/login")
+                .formLogin()
+                .loginPage("/login")
                 .and()
-                .exceptionHandling().accessDeniedPage("/403"); */
+                .exceptionHandling().accessDeniedPage("/errores/403");
     }
 
 }

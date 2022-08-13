@@ -12,7 +12,7 @@
     background-color: black;
     padding: 25px;
     color: white;
-    margin-top: 100rem;
+    margin-top: 40rem;
 }
 
 .nav-item {
@@ -30,7 +30,6 @@
 
 .card {
     float: left;
-    margin-right: 10px;
     margin-left: 20px;
 
 }
@@ -177,3 +176,4 @@ body {
     font-family: 'Permanent Marker', cursive;
     padding-left: 50px;
 }
+

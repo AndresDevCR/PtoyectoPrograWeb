@@ -7,7 +7,7 @@
         <div class="container text-center">
             <h1 class="text-center m-5"> Error 403</h1>
             <h2 class="text-center m-5"> No tienes permiso para ver esta pagina</h2>
-            <h3 class="text-center m-5"> <a href="{{ url('/') }}"> Volver al inicio </a></h3>
+            <h3 class="text-center m-5"> <a th:href="@{/}" class="btn btn-primary"> Volver a la pagina principal </a></h3>
         </div>
     </section>
 </body>

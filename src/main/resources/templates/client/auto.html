@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="layout/plantilla::head"></head>
+<header th:replace="layout/plantilla::headerindex"></header>
+
+<body>
+    <article class="container" th:each="item : ${autos}">
+        <div class="card" style="width: 18rem;">
+            <img th:src="@{'/img/'+${item.image}}" class="card-img-top">
+            <div class="card-body">
+                <h5 th:text="${item.brand}" class="card-title"></h5>
+                <p th:text="${item.description}" class="card-text"></p>
+            </div>
+        </div>
+    </article>
+  
+     
+    
+</body>
+<footer th:replace="layout/plantilla::footer"></footer>
+
+</html>

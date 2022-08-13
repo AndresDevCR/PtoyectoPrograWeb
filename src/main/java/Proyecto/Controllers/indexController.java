@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import Proyecto.Services.AutoNuevoServiceImp;
 import Proyecto.Services.AutoUsadoServiceImp;
 import Proyecto.Services.CarServiceImp;
 import Proyecto.Services.MotoServiceImp;
+import lombok.var;
 
 @Controller
 public class indexController {
@@ -51,6 +53,14 @@ public class indexController {
         var motos = motoService.getAllMotos();
         model.addAttribute("motos", motos);
         return "/client/motocicletas";
+    }
+
+    // show cars by id
+    @GetMapping("/auto/{id}")
+    public String show(@PathVariable Long id, Model model) {
+        var car = carService.find(id);
+        model.addAttribute("car", car);
+        return "/client/auto";
     }
 
     @GetMapping("/Alquiler")
