@@ -6,7 +6,7 @@
 
 <body>
     <section>
-        <h1 class="text-center m-5"> [[#{agregar.alquileres}]] </h1>
+        <h1 class="text-center m-5"> [[#{editar.alquileres}]] </h1>
         <div class="container">
             <form th:action="@{/admin/alquiler/add}" method="post" th:object="${item}" enctype="multipart/form-data">
 
@@ -14,41 +14,41 @@
 
                 <div class="form-control">
                     <label for="brand"> [[#{formulario.marca}]] </label>
-                    <input required type="text" class="form-control" name="brand">
+                    <input required type="text" class="form-control" name="brand" th:value="${item.brand}">
                     <br>
                 </div>
                 <div class="form-control">
                     <label for="model">  [[#{formulario.modelo}]] </label>
-                    <input required type="text" class="form-control" name="model">
+                    <input required type="text" class="form-control" name="model" th:value="${item.model}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="year">  [[#{formulario.anio}]] </label>
-                    <input required type="number" class="form-control" name="year">
+                    <input required type="number" class="form-control" name="year" th:value="${item.year}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="color">  [[#{formulario.color}]] </label>
-                    <input required type="text" class="form-control" name="color">
+                    <input required type="text" class="form-control" name="color" th:value="${item.color}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="pice">  [[#{formulario.precio}]] </label>
-                    <input required type="number" class="form-control" name="price">
+                    <input required type="number" class="form-control" name="price" th:value="${item.price}">
                     <br>
                 </div>
 
                 <div class="form-control">
                     <label for="km">  [[#{formulario.kilometros}]] </label>
-                    <input required type="number" class="form-control" name="km">
+                    <input required type="number" class="form-control" name="km" th:value="${item.km}">
                     <br>
                 </div>
                     <div class="form-control">
                         <label for="description"> [[#{formulario.descripcion}]] </label>
-                        <input required type="text" class="form-control" name="description">
+                        <input required type="text" class="form-control" name="description" th:value="${item.description}">
                         <br>
                     </div>
 
@@ -57,7 +57,7 @@
                         <input required type="file" class="form-control" name="file">
                         <br>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-success">[[#{boton.agregar}]] <i class="fa-solid fa-circle-plus"></i></button>
+                    <button type="submit" class="btn btn-primary btn-success">[[#{boton.editar}]] <i class="fa-solid fa-circle-plus"></i></button>
             </form>
         </div>
     </section>
