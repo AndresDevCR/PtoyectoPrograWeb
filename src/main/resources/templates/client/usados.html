@@ -42,14 +42,14 @@
                 </button>
             </div>
         </div>
-        <h1 class="container text-center admin">Autos Usados</h1>
+        <h1 class="container text-center admin">[[#{auto.usado}]]</h1>
         <article class="container" th:each="item : ${usados}">
             <div class="card" style="width: 18rem;">
                 <img th:src="@{'/img/'+${item.image}}" class="card-img-top">
                 <div class="card-body">
                     <h5 th:text="${item.brand}" class="card-title"></h5>
                     <p th:text="${item.description}" class="card-text"></p>
-                    <a href="#" class="btn btn-primary">ver</a>
+                    <a href="#" class="btn btn-primary">[[#{boton.ver}]]</a>
                 </div>
             </div>
         </article>

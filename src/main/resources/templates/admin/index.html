@@ -43,9 +43,9 @@
             </div>
         </div>
         <div class="container text-center">
-            <h1 class="container admin">Modo Administrador</h1>
-            <h6 class="used" >Vehiculos Usados</h6>
-            <a th:href="@{/admin/auto/new}" class="btn btn-primary add">Agregar <i class="fa-solid fa-circle-plus"></i> </a>
+            <h1 class="container admin">[[#{pagina.admin}]]</h1>
+            <h6 class="used" >[[#{auto.usado}]]</h6>
+            <a th:href="@{/admin/auto/new}" class="btn btn-primary add">[[#{boton.nuevo}]] <i class="fa-solid fa-circle-plus"></i> </a>
         </div>
         <article class="container" th:each="item : ${autos}">
             <div class="card" style="width: 18rem;">
@@ -53,9 +53,9 @@
                 <div class="card-body">
                     <h5 th:text="${item.brand}" class="card-title"></h5>
                     <p th:text="${item.description}" class="card-text"></p>
-                    <a th:href="@{/auto}" class="btn btn-primary">Ver <i class="fa-solid fa-eye"></i></a>
-                    <a th:href="@{/admin/auto/edit/} + ${item.idCar}" class="btn btn-primary edit">Editar <i class="fa-solid fa-pen-to-square"></i></a>
-                    <a th:href="@{/admin/auto/delete/} + ${item.idCar}" class="btn btn-danger delete">Eliminar</a>
+                    <a th:href="@{/auto}" class="btn btn-primary">[[#{boton.ver}]] <i class="fa-solid fa-eye"></i></a>
+                    <a th:href="@{/admin/auto/edit/} + ${item.idCar}" class="btn btn-primary edit">[[#{boton.editar}]] <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a th:href="@{/admin/auto/delete/} + ${item.idCar}" class="btn btn-danger delete">[[#{boton.eliminar}]]</a>
                 </div>
             </div>
         </article>

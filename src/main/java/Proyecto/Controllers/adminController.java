@@ -59,7 +59,7 @@ public class adminController {
     public String delete(@PathVariable Long id) {
         Car car = carService.find(id);
         carService.delete(car);
-        return "redirect:/admin/index";
+        return "redirect:/admin";
     }
 
     @GetMapping("/admin/auto/edit/{id}")
@@ -68,4 +68,5 @@ public class adminController {
         model.addAttribute("item", car);
         return "/admin/editarCar";
     }
+    
 }

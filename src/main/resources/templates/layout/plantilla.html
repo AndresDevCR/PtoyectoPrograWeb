@@ -27,22 +27,22 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-3 mt-lg-1">
                     <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/Nuevos}"> Autos Nuevos </a>
+                        <a class="nav-link" th:href="@{/Nuevos}">[[#{auto.nuevo}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/Usados}"> Autos Usados </a>
+                        <a class="nav-link" th:href="@{/Usados}">[[#{auto.usado}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/Alquiler}"> Alquileres de Vehículos</a>
+                        <a class="nav-link" th:href="@{/Alquiler}">[[#{auto.alquilar}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/Motocicletas}"> Motocicletas </a>
+                        <a class="nav-link" th:href="@{/Motocicletas}"> [[#{moto.moto}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/Talleres}"> Talleres </a>
+                        <a class="nav-link" th:href="@{/Talleres}"> [[#{auto.talleres}]] </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/Contacto}"> Contacto </a>
+                        <a class="nav-link" th:href="@{/Contacto}"> [[#{auto.contacto}]] </a>
                     </li>
                 </ul>
             </div>
@@ -63,21 +63,21 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-3 mt-lg-1">
                     <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/admin/nuevos}"> Autos Nuevos </a>
+                        <a class="nav-link" th:href="@{/admin/nuevos}"> [[#{auto.nuevo}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/admin/usados}"> Autos Usados </a>
+                        <a class="nav-link" th:href="@{/admin/usados}"> [[#{auto.usado}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/admin/alquiler}"> Alquileres de Vehículos</a>
+                        <a class="nav-link" th:href="@{/admin/alquiler}">[[#{auto.alquilar}]]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/admin/motos}"> Motocicletas </a>
+                        <a class="nav-link" th:href="@{/admin/motos}"> [[#{moto.moto}]] </a>
                     </li>
                     <li class="nav-item">
                         <form method="POST" th:action="@{/logout}">
                             <a href="#" onclick="this.parentNode.submit();" class="nav-link">
-                                <i style="color: red;" class="fas fa-user-times"> </i>Logout</a>
+                                <i style="color: red;" class="fas fa-user-times"> </i>[[#{login.logout}]]</a>
                         </form>
                     </li>
                 </ul>
@@ -93,11 +93,11 @@
                 <div class="col-md-4">
                     <h3>Solo Llantas CR</h3>
                     <p>
-                        es una empresa creada para la publicación de Vehículos a la venta.
+                       [[#{pagina.info}]]
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contacto</h3>
+                    <h3>[[#{auto.contacto}]]</h3>
                     <p>
                         <i class="fas fa-envelope"></i>
                         <span>
@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                            <span>Raven Software CR © 2022 All Rights Reserved.</span>
+                            <span>[[#{pagina.footer}]]</span>
                         </p>
                     </div>
                 </div>

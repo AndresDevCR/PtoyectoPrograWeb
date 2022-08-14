@@ -14,7 +14,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("admin").password("{noop}admin").roles("ADMIN");
+                .withUser("admin").password("{noop}admin").roles("ADMIN")
+                .and()
+                .withUser("user").password("{noop}user").roles("USER");
     }
 
     @Override
@@ -22,9 +24,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/user/**").hasRole("USER")
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .defaultSuccessUrl("/admin")
+                .failureUrl("/errores/403")
                 .and()
                 .exceptionHandling().accessDeniedPage("/errores/403");
     }
