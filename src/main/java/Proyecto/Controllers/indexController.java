@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import Proyecto.Services.AlquilerServiceImp;
 import Proyecto.Services.AutoNuevoServiceImp;
 import Proyecto.Services.AutoUsadoServiceImp;
 import Proyecto.Services.CarServiceImp;
@@ -26,6 +27,9 @@ public class indexController {
 
     @Autowired
     private AutoUsadoServiceImp autoUsadoService;
+
+    @Autowired
+    private AlquilerServiceImp alquilerService;
 
     @GetMapping("/")
     public String index(Model model) {
@@ -64,8 +68,11 @@ public class indexController {
     }
 
     @GetMapping("/Alquiler")
-    public String alquiler() {
+    public String adminAlquilers(Model model) {
+        var alquileres = alquilerService.getAllAlquileres();
+        model.addAttribute("alquileres", alquileres);
         return "/client/alquiler";
+       
     }
 
     @GetMapping("/Contacto")
