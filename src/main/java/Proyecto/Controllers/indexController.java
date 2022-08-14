@@ -68,7 +68,7 @@ public class indexController {
     }
 
     @GetMapping("/Alquiler")
-    public String adminAlquilers(Model model) {
+    public String Alquileres(Model model) {
         var alquileres = alquilerService.getAllAlquileres();
         model.addAttribute("alquileres", alquileres);
         return "/client/alquiler";
