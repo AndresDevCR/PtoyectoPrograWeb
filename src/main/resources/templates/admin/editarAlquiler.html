@@ -6,11 +6,11 @@
 
 <body>
     <section>
-        <h1 class="text-center m-5"> [[#{agregar.nuevo}]] <br> <i class="fa-solid fa-car"></i></h1>
+        <h1 class="text-center m-5"> [[#{editar.alquileres}]] </h1>
         <div class="container">
-            <form th:action="@{/admin/nuevos/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+            <form th:action="@{/admin/alquiler/add}" method="post" th:object="${item}" enctype="multipart/form-data">
 
-                <input type="hidden" class="form-control" name="idAuto">
+                <input type="hidden" class="form-control" name="idAlquiler">
 
                 <div class="form-control">
                     <label for="brand"> [[#{formulario.marca}]] </label>
@@ -57,7 +57,7 @@
                         <input required type="file" class="form-control" name="file">
                         <br>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-success">[[#{boton.agregar}]] <i class="fa-solid fa-circle-plus"></i></button>
+                    <button type="submit" class="btn btn-primary btn-success">[[#{boton.editar}]] <i class="fa-solid fa-circle-plus"></i></button>
             </form>
         </div>
     </section>
