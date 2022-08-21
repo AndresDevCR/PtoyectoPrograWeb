@@ -14,11 +14,10 @@
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">Fundador</strong>
+                        <strong class="d-inline-block mb-2 text-primary">[[#{contacto.fundador}]]</strong>
                         <h3 class="mb-0">Jose Andres Vargas Vargas</h3>
                         <br />
-                        <p class="card-text mb-auto">Estudiante de Ingenería en Sistemas de Computación en la
-                            Universidad Fidélitas.</p>
+                        <p class="card-text mb-auto">[[#{contacto.carrera}]]</p>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -35,17 +34,17 @@
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">Cofundador</strong>
+                        <strong class="d-inline-block mb-2 text-success">[[#{contacto.cofundador}]]</strong>
                         <h3 class="mb-0">Daniel Díaz Chong</h3>
                         <br />
-                        <p class="mb-auto">Estudiante de Ingenería en Sistemas de Computación en la Universidad Fidélitas.</p>
+                        <p class="mb-auto">[[#{contacto.carrera}]]</p>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                             <img src="../img/chong.jpg" class="img-fluid rounded-top card-img"
-                            style="height: 13rem; width: 13rem; margin-top: 20px; margin-right: 10px; ">
+                                style="height: 13rem; width: 13rem; margin-top: 20px; margin-right: 10px; ">
                         </svg>
                     </div>
                 </div>
@@ -53,41 +52,27 @@
         </div>
         <div class="row g-5">
             <div class="col-md-8">
-                <h3 class="pb-4 mb-4 fst-italic border-bottom">Acerca Nosotros</h3>
-
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">[[#{contacto.acercaNosotros}]]</h3>
                 <article class="blog-post">
-                    <h2 class="blog-post-title mb-1">Historia</h2>
-                    <p class="blog-post-meta">II Cuatrimestre del 2022</p>
+                    <h2 class="blog-post-title mb-1">[[#{contacto.historia}]]</h2>
+                    <p class="blog-post-meta">[[#{contacto.segundoCuatri}]]</p>
 
-                    <p>Esta página es el proyecto de Desarrollo de Aplicaciones Web y Patrones que se empezó a trabajar
-                        desde el comienzo de este cuatrismestre con el profesor Don Wilberth Molina Perez.</p>
+                    <p>[[#{contacto.historiaTexto1}]]</p>
                     <hr>
-                    <p>Esta página trata de no solo ser un proyecto que realizar. Solo Llantas CR tiene como objetivo
-                        ser una de las mejores,
-                        o sino la mejor página Web relacionada con todo lo que tenga que ver con vehículos en Costa
-                        Rica.</p>
-                    <h2>Proposito</h2>
-                    <p>Se desea ingresar al mundo real, ser competencia hacía las demas páginas de Costa Rica. El
-                        proposito
-                        es ayudar a los usuarios con necesidades relacionadas con sus vehículos o motocicletas,
-                        si el cliente desea vender su vehiculo, alquilar un vehiculo por determinado tiempo,
-                        comprar un vehiculo usado entre otras cosas, Solo Llantas CR le proporciona esas posibilidades a
-                        los usuarios.
-                    </p>
-                    <h3>Herramientas Utilizadas</h3>
-                    <p>A continuación se mostrar algunas de las herramientas que se utilizaron para el desarrollo de
-                        Solo Llantas CR:</p>
+                    <p>[[#{contacto.historiaTexto2}]]</p>
+                    <h2>[[#{contacto.proposito}]]</h2>
+                    <p>[[#{contacto.propositoTexto}]]</p>
+                    <h3>[[#{contacto.herramientas}]]</h3>
+                    <p>[[#{contacto.herramientasTexto}]]</p>
                     <dl>
                         <dt>HyperText Markup Language (HTML)</dt>
-                        <dd>Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos.
-                        </dd>
+                        <dd>[[#{contacto.herramientasHTML}]]</dd>
                         <dt>Cascading Style Sheets (CSS)</dt>
-                        <dd>Es un lenguaje que maneja el diseño y presentación de las páginas web.</dd>
+                        <dd>[[#{contacto.herramientasCSS}]]</dd>
                         <dt>Java</dt>
-                        <dd>Es una plataforma informática de lenguaje de programación.</dd>
+                        <dd>[[#{contacto.herramientasJava}]]</dd>
                         <dt>My Structured Query Language(MySQL)</dt>
-                        <dd>Este permite almacenar y acceder a los datos a través de múltiples motores de
-                            almacenamiento.</dd>
+                        <dd>[[#{contacto.herramientasMySQL}]]</dd>
                 </article>
 
             </div>
@@ -95,28 +80,26 @@
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">Acerca de Solo Llantas CR</h4>
-                        <p class="mb-0">Es el mejor lugar para poder vender y comprar su vehiculo y su motocicleta,
-                            ademas de brindar una ayuda a los usuarios con darles info sobre los talleres mas
-                            cercanos.</p>
+                        <h4 class="fst-italic">[[#{contacto.acercaSLCR}]]</h4>
+                        <p class="mb-0">[[#{contacto.acercaSLCRTexto}]]</p>
                     </div>
                     <div class="p-4">
-                        <h4 class="fst-italic">Info Contacto</h4>
+                        <h4 class="fst-italic">[[#{contacto.Info}]]</h4>
                         <ol class="list-unstyled mb-0">
-                            <li>Fundador: José A. Vargas Vargas</li>
-                            <li>Correo: <a href="#">joseavv@gmail.com</a></li>
-                            <li>Telf: <a>8899-7766</a></li>
-                            <li>Cofundadror: Daniel J. Díaz Chong</li>
-                            <li>Correo: <a href="#">danielch@gmail.com</a></li>
-                            <li>Telf: <a>8989-4565</a></li>
+                            <li>[[#{contacto.fundador}]]: José A. Vargas Vargas</li>
+                            <li>[[#{contacto.correo}]]: <a href="#">joseavv@gmail.com</a></li>
+                            <li>[[#{contacto.telf}]]: <a>8899-7766</a></li>
+                            <li>[[#{contacto.cofundador}]]: Daniel J. Díaz Chong</li>
+                            <li>[[#{contacto.correo}]]: <a href="#">danielch@gmail.com</a></li>
+                            <li>[[#{contacto.telf}]]: <a>8989-4565</a></li>
                             <li>Solo llantas Costa Rica</li>
-                            <li>Correo: <a href="#">solollantascr@gmail.com</a></li>
-                            <li>Telf: <a>7894-3654</a></li>
-                            <li>Ubicación: <a href="#">LaGuacima/googlemaps.com</a></li>
+                            <li>[[#{contacto.correo}]]: <a href="#">solollantascr@gmail.com</a></li>
+                            <li>[[#{contacto.telf}]]: <a>7894-3654</a></li>
+                            <li>[[#{contacto.ubi}]]: <a href="#">LaGuacima/googlemaps.com</a></li>
                         </ol>
                     </div>
                     <div class="p-4">
-                        <h4 class="italic">Siguenos en nuestras redes sociales</h4>
+                        <h4 class="italic">[[#{contacto.redes}]]</h4>
                         <ol class="list-unstyled">
                             <li><a href="#">Twitter</a></li>
                             <li><a href="#">Facebook</a></li>
