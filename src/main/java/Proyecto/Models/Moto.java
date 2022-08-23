@@ -1,9 +1,7 @@
 package Proyecto.Models;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
-
 import lombok.Data;
 
 @Entity
