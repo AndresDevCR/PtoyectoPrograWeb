@@ -23,6 +23,9 @@ then the page has to be programmed so that it can be updated by a person inexper
 in which you can change the photo, description, title, name, and price of the vehicle, the idea is to create an application that does not need much maintenance
 by a software/systems engineer.
 
+The project is based on applying the knowledge of being able to create and consume CRUDs, 
+through the administrator mode you can make your respective publications to the client's page, 
+since it has the administrator role that has the permissions to modify the publications
 
 technologies
 1.	HTML
