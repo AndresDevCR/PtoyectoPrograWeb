@@ -29,7 +29,7 @@ technologies
 2.	Css
 3.	Boostrap.
 4.	Thymeleaf
-5.Spring Security
+5. Spring Security
 6. in18
 
 
